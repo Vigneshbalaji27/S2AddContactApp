@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    
+    <constant name="struts.devMode" value="true" />
+    <constant name="struts.ui.theme" value="css_xhtml"/>
+    <constant name="struts.custom.i18n.resources" value="MessageResources"/>
+
+    <package name="test"  extends="struts-default">
+
+      <action name="openHomePageView">
+		<result>HomePage.jsp</result>
+	</action>
+	
+	<action name="openAddContactView">
+		<result>AddContact.jsp</result>
+	</action>
+	
+	<action name="addcontact" class="com.vikki.addcontact.AddContactAction">
+	<result name="success">Success.jsp</result>
+	<result name="input">AddContact.jsp</result>
+	</action>
+    </package>
+
+</struts>
